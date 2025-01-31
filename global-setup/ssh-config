@@ -1,0 +1,31 @@
+AddKeysToAgent yes
+
+Host nas samwell
+    HostName 192.168.10.11
+    Port 42
+    User nils
+
+Host tyrion
+    HostName 192.168.10.16
+    Port 22
+    User nils
+
+Host drogon
+    HostName 128.140.64.179
+    Port 22
+    User nils
+
+Host brandon
+    HostName 192.168.10.41
+    Port 22
+    User nils
+
+Host jon
+    HostName 192.168.10.43
+    Port 22
+    User nils
+
+Host robb
+    HostName 192.168.10.45
+    Port 22
+    User nils

@@ -1,0 +1,30 @@
+[init]
+	defaultBranch = main
+[user]
+	email = mail@nilslorenzen.de
+	name = Nils Lorenzen
+[core]
+	editor = code --wait
+[commit]
+	verbose = true
+[pull]
+	rebase = true
+[alias]
+	l = log --oneline --decorate
+	pl = pull
+	ps = push
+	s = status
+	c = commit
+	f = fetch
+	ca = commit --all
+	co = checkout
+	b = branch
+	cob = checkout -b
+	sa = stash apply
+	ss = stash save
+	sl = stash list
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
