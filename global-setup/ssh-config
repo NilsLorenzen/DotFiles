@@ -10,8 +10,8 @@ Host tyrion
     Port 22
     User nils
 
-Host drogon
-    HostName 128.140.64.179
+Host arya
+    HostName 192.168.10.40
     Port 22
     User nils
 
@@ -27,5 +27,10 @@ Host jon
 
 Host robb
     HostName 192.168.10.45
+    Port 22
+    User nils
+
+Host drogon
+    HostName 128.140.64.179
     Port 22
     User nils
