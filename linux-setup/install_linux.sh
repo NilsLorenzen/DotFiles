@@ -2,16 +2,14 @@
 echo "Das Linux Install Script wurde gestartet"
 
 sudo apt update
-
 sudo apt upgrade
 
+
+sudo apt install zsh git htop glances zip unzip mc -y
+
 sudo apt install software-properties-common -y
-
 sudo add-apt-repository --yes --update ppa:ansible/ansible
-
 sudo apt install ansible -y
-
-sudo apt install zsh -y
 
 echo "Install Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
