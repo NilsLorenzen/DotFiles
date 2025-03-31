@@ -2,15 +2,27 @@
 alias aptuu="sudo apt update && sudo apt upgrade -y"
 alias ports="ss -tulnp"
 
-# Git
-alias g="git"
-
 # SystemD
 alias sysstart="sudo systemctl start"
 alias sysenable="sudo systemctl enable"
 alias sysstop="sudo systemctl stop"
 alias sysdisable="sudo systemctl disable"
 alias sysrestart="sudo systemctl restart"
+
+# Git
+alias g="git"
+
+# Terraform
+alias tf="terraform"
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+
+# Ansible
+alias anplay="ansible-playbook"
+alias anvc="ansible-vault create"
+alias anve="ansible-vault edit"
+alias anv="ansible-vault view"
 
 # Docker
 alias dps="docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Ports}}'"
