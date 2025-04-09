@@ -10,7 +10,7 @@
 [pull]
 	rebase = true
 [alias]
-	l = log --oneline --decorate
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pl = pull
 	ps = push
 	s = status
