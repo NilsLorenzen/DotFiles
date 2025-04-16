@@ -1,6 +1,7 @@
 # Other
 alias aptuu="sudo apt update && sudo apt upgrade -y"
 alias ports="ss -tulnp"
+alias getallusers="cut -d: -f1 /etc/passwd"
 
 # SystemD
 alias sysstart="sudo systemctl start"

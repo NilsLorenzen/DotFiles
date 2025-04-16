@@ -34,3 +34,9 @@ Host drogon
     HostName 128.140.64.179
     Port 22
     User nils
+    
+Host s1
+    HostName 91.99.69.159
+    Port 22
+    User nils
+
