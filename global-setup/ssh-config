@@ -18,17 +18,17 @@ Host arya
 Host brandon
     HostName 192.168.10.41
     Port 22
-    User nils
+    User root
 
 Host jon
     HostName 192.168.10.43
     Port 22
-    User nils
+    User root
 
 Host robb
     HostName 192.168.10.45
     Port 22
-    User nils
+    User root
 
 Host drogon
     HostName 128.140.64.179
