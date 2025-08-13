@@ -40,3 +40,29 @@ Host s1
     Port 22
     User nils
 
+
+
+Host k3s-cp-01 kc1
+    HostName 192.168.10.93
+    Port 22
+    User nils
+
+Host k3s-cp-02 kc2
+    HostName 192.168.10.94
+    Port 22
+    User nils
+
+Host k3s-cp-03 kc3
+    HostName 192.168.10.95
+    Port 22
+    User nils
+
+Host k3s-w-01 kw1
+    HostName 192.168.10.96
+    Port 22
+    User nils
+
+Host k3s-w-02 kw2
+    HostName 192.168.10.97
+    Port 22
+    User nils
