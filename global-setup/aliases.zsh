@@ -3,6 +3,9 @@ alias aptuu="sudo apt update && sudo apt upgrade -y"
 alias ports="ss -tulnp"
 alias getallusers="cut -d: -f1 /etc/passwd"
 
+alias getpip="curl ifconfig.me" # get public IP
+alias getpipdetailed="curl https://ipinfo.io" # get public IP with ISP Details
+
 # SystemD
 alias sysstart="sudo systemctl start"
 alias sysenable="sudo systemctl enable"
