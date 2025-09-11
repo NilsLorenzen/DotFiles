@@ -10,11 +10,6 @@ Host tyrion
     Port 22
     User nils
 
-Host arya
-    HostName 192.168.10.40
-    Port 22
-    User nils
-
 Host brandon
     HostName 192.168.10.41
     Port 22
@@ -40,6 +35,16 @@ Host s1
     Port 22
     User nils
 
+Host ha homeassistant
+    HostName 192.168.10.70
+    Port 22
+    User root
+
+
+Host down
+    HostName 192.168.10.91
+    Port 22
+    User tixie
 
 
 Host k3s-cp-01 kc1
