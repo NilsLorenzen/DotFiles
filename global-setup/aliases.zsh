@@ -1,5 +1,5 @@
 # Other
-alias please="sudo $(fc -ln -1)"          # Wiederhole letzten Befehl mit sudo
+alias please='sudo $(fc -ln -1)'          # Wiederhole letzten Befehl mit sudo
 alias aptuu="sudo apt update && sudo apt upgrade -y"
 
 alias lsl="ls -lah"
