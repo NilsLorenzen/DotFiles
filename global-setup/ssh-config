@@ -35,6 +35,16 @@ Host ht1
     Port 22
     User nils
 
+Host ht_beta
+    HostName 192.168.10.50
+    Port 22
+    User nils
+
+Host github_runner_nils
+    HostName 192.168.10.51
+    Port 22
+    User nils
+
 Host ha homeassistant
     HostName 192.168.10.70
     Port 22
