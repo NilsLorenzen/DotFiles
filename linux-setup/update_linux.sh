@@ -2,7 +2,7 @@
 set -euo pipefail
 echo "Das Linux Update Script wurde gestartet"
 
-sudo -v
+#sudo -v
 
 echo "Aktualisiere apt Repositories und Pakete"
 sudo apt update

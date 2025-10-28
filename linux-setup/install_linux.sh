@@ -2,7 +2,7 @@
 set -euo pipefail
 echo "Das Linux Install Script wurde gestartet"
 
-sudo -v
+#sudo -v
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
