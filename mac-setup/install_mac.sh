@@ -1,7 +1,39 @@
-#!/bin.bash
+#!/usr/bin/env bash
+set -euo pipefail
 echo "Das Mac Install Script wurde gestartet"
 
 sudo -v
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+TS="$(date +%s)"
+
+# Symlink Funktion
+link_file() {
+  local src="$1"
+  local dst="$2"
+
+  mkdir -p "$(dirname "$dst")"
+
+  if [ -L "$dst" ]; then
+    # bereits Symlink -> prüfen ob korrekt
+    if [ "$(readlink "$dst")" = "$src" ]; then
+      echo "Symlink exists and is correct: $dst -> $src"
+      return 0
+    else
+      echo "Removing stale symlink: $dst"
+      rm -f "$dst"
+    fi
+  fi
+
+  if [ -e "$dst" ]; then
+    echo "Backing up existing file: $dst -> ${dst}.backup.$TS"
+    mv "$dst" "${dst}.backup.$TS"
+  fi
+
+  ln -s "$src" "$dst"
+  echo "Linked: $dst -> $src"
+}
 
 # Überprüfen, ob Homebrew installiert ist
 if ! command -v brew &> /dev/null; then
@@ -16,7 +48,7 @@ else
   echo "Homebrew ist bereits installiert."
 fi
 
-# Homebrew für Cask aktualisieren
+# Homebrew aktualisieren
 echo "Aktualisiere Homebrew..."
 brew update
 brew upgrade
@@ -126,19 +158,25 @@ echo "Install dotnet 8"
 brew install dotnet@8
 
 # =============================================================================================
+echo "Kopiere Config-Files (erstelle Symlinks)"
+# benutze absolute Pfade aus dem Repo
+link_file "$REPO_ROOT/mac-setup/zshrc-mac" "$HOME/.zshrc"
+link_file "$REPO_ROOT/mac-setup/p10k.zsh-mac" "$HOME/.p10k.zsh"
+link_file "$REPO_ROOT/global-setup/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
+link_file "$REPO_ROOT/global-setup/gitconfig" "$HOME/.gitconfig"
 
-echo "Kopiere Config-Files"
-cp -v zshrc-mac ~/.zshrc
-cp -v p10k.zsh-mac ~/.p10k.zsh
-cp -v ../global-setup/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-cp -v ../global-setup/gitconfig ~/.gitconfig
-mkdir ~/.ssh
-cp -v ../global-setup/ssh-config ~/.ssh/config
-mkdir ~/passwords
+# SSH config
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+link_file "$REPO_ROOT/global-setup/ssh-config" "$HOME/.ssh/config"
+chmod 600 "$HOME/.ssh/config"
+
+# passwords placeholder
+mkdir -p "$HOME/passwords"
 touch "$HOME/passwords/nlo"
+chmod 600 "$HOME/passwords/nlo"
 
 # =============================================================================================
-
 echo "Das Mac Install Script ist abgeschlossen"
 echo "manuelle Todos:"
 echo "- iTerm2 config Datei einspielen"
