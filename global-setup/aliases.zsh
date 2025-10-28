@@ -1,5 +1,5 @@
 # Other
-alias please='sudo $(fc -ln -1)'          # Wiederhole letzten Befehl mit sudo
+alias bitte='sudo $(fc -ln -1)'          # Wiederhole letzten Befehl mit sudo
 alias aptuu="sudo apt update && sudo apt upgrade -y"
 
 alias lsl="ls -lah"
@@ -36,7 +36,7 @@ alias tf="terraform"
 alias tfi="terraform init"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
-alias tfa="terraform validate"
+alias tfv="terraform validate"
 
 # Ansible
 alias anplay="ansible-playbook"
