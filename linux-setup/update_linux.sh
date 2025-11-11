@@ -43,6 +43,7 @@ safe_link "$REPO_ROOT/linux-setup/p10k.zsh-linux" "$HOME/.p10k.zsh"
 mkdir -p "$HOME/.oh-my-zsh/custom"
 safe_link "$REPO_ROOT/global-setup/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 safe_link "$REPO_ROOT/global-setup/gitconfig" "$HOME/.gitconfig"
+safe_link "$REPO_ROOT/global-setup/gitignore" "$HOME/.gitignore"
 
 mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh"

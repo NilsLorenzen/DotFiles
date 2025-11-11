@@ -77,6 +77,7 @@ link_file "$REPO_ROOT/linux-setup/p10k.zsh-linux" "$HOME/.p10k.zsh"
 mkdir -p "$HOME/.oh-my-zsh/custom"
 link_file "$REPO_ROOT/global-setup/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 link_file "$REPO_ROOT/global-setup/gitconfig" "$HOME/.gitconfig"
+link_file "$REPO_ROOT/global-setup/gitignore" "$HOME/.gitignore"
 
 # SSH config
 mkdir -p "$HOME/.ssh"

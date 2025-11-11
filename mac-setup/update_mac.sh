@@ -46,6 +46,8 @@ safe_link "$REPO_ROOT/mac-setup/zshrc-mac" "$HOME/.zshrc"
 safe_link "$REPO_ROOT/mac-setup/p10k.zsh-mac" "$HOME/.p10k.zsh"
 safe_link "$REPO_ROOT/global-setup/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
 safe_link "$REPO_ROOT/global-setup/gitconfig" "$HOME/.gitconfig"
+safe_link "$REPO_ROOT/global-setup/gitignore" "$HOME/.gitignore"
+
 mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh"
 safe_link "$REPO_ROOT/global-setup/ssh-config" "$HOME/.ssh/config"

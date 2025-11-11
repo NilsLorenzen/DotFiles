@@ -1,0 +1,23 @@
+# Node
+npm-debug.log
+
+# Mac
+.DS_Store
+
+# WebStorm
+.idea/
+
+# General
+log/
+.env
+
+# File Types
+*.log
+*.tmp
+*.key
+*.vhdx
+*.vhd
+*.iso
+*.bak
+*.exe
+*.pem

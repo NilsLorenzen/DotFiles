@@ -5,26 +5,36 @@
 	name = Nils Lorenzen
 [core]
 	editor = code --wait
+	excludesfile = ~/.gitignore
 [commit]
 	verbose = true
 [pull]
 	rebase = true
 [alias]
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	s = status
+
 	pl = pull
 	ps = push
-	s = status
-	c = commit
 	f = fetch
-	ca = commit --all
-	co = checkout
-	b = branch
-	cob = checkout -b
-	sa = stash apply
-	ss = stash save
-	sl = stash list
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+
+	a = add . # Add all changes
+	c = commit
+	ca = commit --all -m # Commit all changes with message
+	amend = commit --amend # Add something to last commit
+
+	co = checkout # checkout branch or file
+	b = branch # list branches
+	cob = checkout -b # create and checkout new branch
+	swb = switch -c # create and switch to new branch
+	sw = switch # switch to another branch
+
+	sa = stash apply # apply latest stash
+	sa = stash pop # apply latest stash and drop it from the stash list
+	ss = stash save # save working directory and index state to a new stash
+	sl = stash list # list all stashes
+[filter "lfs"] # use git-lfs for large files
+	required = true # make sure git-lfs is installed
+	clean = git-lfs clean -- %f 
+	smudge = git-lfs smudge -- %f 
 	process = git-lfs filter-process
