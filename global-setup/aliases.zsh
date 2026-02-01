@@ -7,6 +7,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ff="find . -type f -iname"           # Schnell eine Dateien finden
+alias foldersizes du -h -x -d1 /           # Ordner größen anzeigen
 
 alias reload="source ~/.zshrc"
 
