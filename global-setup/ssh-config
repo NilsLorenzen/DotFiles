@@ -56,6 +56,10 @@ Host down
     Port 22
     User tixie
 
+Host arya
+    HostName arya
+    Port 22
+    User nils
 
 Host k3s-cp-01 kc1
     HostName 192.168.10.93
