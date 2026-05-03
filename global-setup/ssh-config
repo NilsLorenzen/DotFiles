@@ -36,7 +36,7 @@ Host ht1
     User nils
 
 Host htbeta
-    HostName 172.20.20.120
+    HostName 172.20.20.110
     Port 22
     User nils
 
