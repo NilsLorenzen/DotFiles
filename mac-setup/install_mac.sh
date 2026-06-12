@@ -160,6 +160,9 @@ brew install dotnet@8
 echo "Install warp"
 brew install --cask warp
 
+echo "Install steam"
+brew install --cask steam
+
 # =============================================================================================
 echo "Kopiere Config-Files (erstelle Symlinks)"
 # benutze absolute Pfade aus dem Repo
