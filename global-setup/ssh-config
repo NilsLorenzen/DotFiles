@@ -1,42 +1,22 @@
 AddKeysToAgent yes
 
-Host nas samwell
-    HostName 192.168.10.11
-    Port 42
-    User nils
-
 Host tyrion
     HostName 192.168.10.16
     Port 22
     User nils
-
-Host brandon
-    HostName 192.168.10.41
-    Port 22
-    User root
-
-Host jon
-    HostName 192.168.10.43
-    Port 22
-    User root
-
-Host robb
-    HostName 192.168.10.45
-    Port 22
-    User root
 
 Host drogon
     HostName 128.140.64.179
     Port 22
     User nils
     
-Host ht1
-    HostName 195.201.39.27
+Host htprod
+    HostName 10.10.10.20
     Port 22
     User nils
 
 Host htbeta
-    HostName 159.69.39.28
+    HostName 10.10.10.10
     Port 22
     User nils
 
@@ -45,11 +25,15 @@ Host github_runner_nils
     Port 22
     User nils
 
+Host github_runner_hetzner
+    HostName 10.10.10.51
+    Port 22
+    User nils
+
 Host ha homeassistant
     HostName 192.168.10.70
     Port 22
     User root
-
 
 Host down
     HostName 192.168.10.91
@@ -61,27 +45,6 @@ Host arya
     Port 22
     User nils
 
-Host k3s-cp-01 kc1
-    HostName 192.168.10.93
-    Port 22
-    User nils
-
-Host k3s-cp-02 kc2
-    HostName 192.168.10.94
-    Port 22
-    User nils
-
-Host k3s-cp-03 kc3
-    HostName 192.168.10.95
-    Port 22
-    User nils
-
-Host k3s-w-01 kw1
-    HostName 192.168.10.96
-    Port 22
-    User nils
-
-Host k3s-w-02 kw2
-    HostName 192.168.10.97
-    Port 22
-    User nils
+Host htproxmox
+    HostName 94.130.48.230
+    User root

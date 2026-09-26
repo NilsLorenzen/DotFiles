@@ -124,9 +124,6 @@ brew install --cask whatsapp
 echo "Install Discord"
 brew install --cask discord
 
-echo "Install Teamspeak 5 Beta"
-brew install --cask teamspeak-client@beta
-
 echo "Install Plex Player"
 brew install --cask plex
 
@@ -154,14 +151,17 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo "Install node.js"
 brew install node
 
-echo "Install dotnet 8"
-brew install dotnet@8
+echo "Install dotnet"
+brew install dotnet
 
 echo "Install warp"
 brew install --cask warp
 
 echo "Install steam"
 brew install --cask steam
+
+echo "Install pre-commit"
+brew install pre-commit
 
 # =============================================================================================
 echo "Kopiere Config-Files (erstelle Symlinks)"
