@@ -40,6 +40,11 @@ Host down
     Port 22
     User tixie
 
+Host hermes
+    HostName 10.10.10.92
+    Port 22
+    User nils
+
 Host arya
     HostName arya
     Port 22
